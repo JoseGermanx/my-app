@@ -5,7 +5,7 @@ import React from 'react'
 const Button = () => {
   return (
     
-        <button onClick={() => alert("Hola mundo")}>Click me</button>
+        <button className="btn btn-success" onClick={() => alert("Hola mundo")}>Click me</button>
     
   )
 }
