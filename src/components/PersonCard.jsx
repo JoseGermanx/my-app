@@ -5,9 +5,11 @@ function PersonCard(props) {
 
   return (
     <div className="card">
-      <h2>Nombre: {nombrePersona}</h2>
-      <p>Nombre de usuario: {NombreUsuario}</p>
-      <p>Email: {emailUsuario}</p>
+      <div className="card-body">
+        <h2 className="card-title">Nombre: {nombrePersona}</h2>
+        <p className="card-text">Nombre de usuario: {NombreUsuario}</p>
+        <p>Email: {emailUsuario}</p>
+      </div>
     </div>
   );
 }
