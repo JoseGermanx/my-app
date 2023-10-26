@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";  
 import "./App.css";
 import PersonCard from "./components/PersonCard";
+import EjemploEffect from "./components/ejemploEffect";
 
 function App() {
   const personList = [
@@ -39,14 +40,16 @@ function App() {
       <button onClick={deletePersonas}>Borrar lista</button>
       <button onClick={setPerson}>Agregar persona</button>
 
-      {personas.map((person) => (
+      {/* {personas.map((person) => (
         <PersonCard
           key={person.id}
           nombrePersona={person.name}
           NombreUsuario={person.username}
           emailUsuario={person.email}
         />
-      ))}
+      ))} */}
+
+      <EjemploEffect />
     </div>
   );
 }
