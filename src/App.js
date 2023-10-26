@@ -4,10 +4,11 @@ import PersonCard from "./components/PersonCard";
 
 function App() {
 
+  const [data, setData] = useState([]); 
   const [personas, setPersonas] = useState([]);
 
   const mostrarPersonas = () => {
-    setPersonas();
+    setPersonas(data);
   };
 
   const deletePersonas = () => {
@@ -17,7 +18,7 @@ function App() {
   useEffect(() => {
     fetch("https://jsonplaceholder.typicode.com/users")
     .then((res) => res.json())
-    .then((data) => setPersonas(data));
+    .then((data) => setData(data));
   }, []);
 
   return (
