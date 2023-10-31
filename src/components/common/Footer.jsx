@@ -4,7 +4,7 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div>Footer</div>
+    <div className='container bg-danger'>Este es el footer de la APP</div>
   )
 }
 

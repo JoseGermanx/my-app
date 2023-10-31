@@ -5,8 +5,8 @@ import NavBar from '../nav/NavBar'
 
 function Header() {
   return (
-    <div>
-        <h1>Titulo App</h1>
+    <div className='container bg-sucess'>
+        <h1>Este es el header de la APP</h1>
         <NavBar />
     </div>
   )
