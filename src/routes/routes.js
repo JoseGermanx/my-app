@@ -4,6 +4,7 @@ import Contact from "../components/layouts/Contact";
 import App from "../App";
 import Home from "../components/layouts/Home";
 import Admin from "../components/admin/Admin";
+import UserRegister from "../components/user-register/UserRegister";
 
 const router = createBrowserRouter([
   {
@@ -26,8 +27,12 @@ const router = createBrowserRouter([
   },
   {
     path: "/admin",
-    element: <Admin />
-  }
+    element: <Admin />,
+  },
+  {
+    path: "/registro",
+    element: <UserRegister />,
+  },
 ]);
 
 export default router;
