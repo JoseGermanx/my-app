@@ -1,11 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const UserRegister = () => {
+
+    const navigate = useNavigate();
 
   const [name, setName] = useState("");
   const [lastName, setLastName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [userCreate, setUserCreate] = useState(false);
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -53,13 +57,20 @@ const UserRegister = () => {
             setLastName("");
             setEmail("");
             setPassword("");
-            alert("Usuario creado con éxito");
+          if (data.status === 201)
+          setUserCreate(true);
         })
         .catch((error) => {
             console.error('Error:', error);
         });
     }
 
+    useEffect(() => {
+        if(userCreate){
+            navigate('/login')
+        }
+
+    },[navigate, userCreate])
 
   return (
     <>
