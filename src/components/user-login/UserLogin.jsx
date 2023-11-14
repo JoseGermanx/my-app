@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { jwtDecode } from "jwt-decode"
 
 const UserLogin = () => {
   const [email, setEmail] = useState("");
@@ -45,6 +46,8 @@ const UserLogin = () => {
         setEmail("");
         setPassword("");
         setUserLogueado(data);
+        const token = jwtDecode(JSON.stringify(data.token));
+        console.log(token);
         localStorage.setItem("token", JSON.stringify(data.token));
       });
   };
