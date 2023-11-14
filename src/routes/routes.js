@@ -5,6 +5,7 @@ import App from "../App";
 import Home from "../components/layouts/Home";
 import Admin from "../components/admin/Admin";
 import UserRegister from "../components/user-register/UserRegister";
+import UserLogin from "../components/user-login/UserLogin";
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
     path: "/registro",
     element: <UserRegister />,
   },
+  {
+    path: "/login",
+    element: <UserLogin />, 
+  }
 ]);
 
 export default router;

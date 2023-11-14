@@ -1,7 +1,7 @@
 import React from "react";
 
-const UserRegister = () => {
-
+const UserLogin = () => {
+ 
 
   return (
     <>
@@ -10,26 +10,6 @@ const UserRegister = () => {
           <div className="col-6">
             <h1>Formulario de registro</h1>
             <form>
-              <div className="mb-3">
-                <label htmlFor="name" className="form-label">
-                  Nombre
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="name"
-                />
-              </div>
-              <div className="mb-3">
-                <label htmlFor="lastName" className="form-label">
-                  Apellido
-                </label>
-                <input
-                  type="text"
-                  className="form-control"
-                  id="lastName"
-                />
-              </div>
               <div className="mb-3">
                 <label htmlFor="email" className="form-label">
                   Correo electrónico
@@ -64,4 +44,4 @@ const UserRegister = () => {
   );
 };
 
-export default UserRegister;
+export default UserLogin;
