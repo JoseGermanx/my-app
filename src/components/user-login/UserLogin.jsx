@@ -46,9 +46,11 @@ const UserLogin = () => {
         setEmail("");
         setPassword("");
         setUserLogueado(data);
+        if(data.token !== undefined){
         const token = jwtDecode(JSON.stringify(data.token));
-        console.log(token);
+        console.log(token.idUser);
         localStorage.setItem("token", JSON.stringify(data.token));
+        }
       });
   };
 
