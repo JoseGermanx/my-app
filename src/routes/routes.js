@@ -6,6 +6,7 @@ import Home from "../components/layouts/Home";
 import Admin from "../components/admin/Admin";
 import UserRegister from "../components/user-register/UserRegister";
 import UserLogin from "../components/user-login/UserLogin";
+import FetchComponent from "../components/caso-fetch/FetchComponent";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ const router = createBrowserRouter([
   {
     path: "/login",
     element: <UserLogin />, 
+  },
+  {
+    path:"/fetch",
+    element: <FetchComponent />,  
   }
 ]);
 

@@ -46,9 +46,10 @@ const UserLogin = () => {
         setEmail("");
         setPassword("");
         setUserLogueado(data);
+        console.log("token antes de decodificar", data.token);
         if(data.token !== undefined){
         const token = jwtDecode(JSON.stringify(data.token));
-        console.log(token.idUser);
+        console.log("Token después de decodificar", token);
         localStorage.setItem("token", JSON.stringify(data.token));
         }
       });
