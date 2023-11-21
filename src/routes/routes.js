@@ -7,6 +7,7 @@ import Admin from "../components/admin/Admin";
 import UserRegister from "../components/user-register/UserRegister";
 import UserLogin from "../components/user-login/UserLogin";
 import FetchComponent from "../components/caso-fetch/FetchComponent";
+import RickFetch from "../components/rick-and-morty/RickFetch";
 
 const router = createBrowserRouter([
   {
@@ -42,7 +43,11 @@ const router = createBrowserRouter([
   {
     path:"/fetch",
     element: <FetchComponent />,  
-  }
+  },
+{
+  path:"/rick",
+  element: <RickFetch />,
+}
 ]);
 
 export default router;
